@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/pages/register_page.dart';
+
 import 'package:to_do_app/widgets/decoration_circle.dart';
+import 'package:to_do_app/widgets/final_button.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -14,7 +17,7 @@ class MainPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 200),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/asset_main_page.jpg',
@@ -42,28 +45,9 @@ class MainPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 40, horizontal: 60),
-                  child: ElevatedButton(
-                    style: const ButtonStyle(
-                      backgroundColor:
-                          WidgetStatePropertyAll(Colors.blueAccent),
-                      padding: WidgetStatePropertyAll(
-                        EdgeInsets.all(20),
-                      ),
-                      shape: WidgetStatePropertyAll(
-                        RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                      ),
-                    ),
-                    onPressed: () => debugPrint('pressed'),
-                    child: const Text(
-                      'Get Started',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                FinalButton(
+                  labelText: 'Get Started',
+                  route: (context) => const RegisterPage(),
                 ),
               ],
             ),
