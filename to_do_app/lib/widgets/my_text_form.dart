@@ -4,6 +4,7 @@ class MyTextForm extends StatefulWidget {
   final String hintText;
   final InputBorder? border;
   final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
   final bool? filled;
   final Color? fillcolor;
   final InputDecoration? decoration;
@@ -13,6 +14,7 @@ class MyTextForm extends StatefulWidget {
     required this.hintText,
     this.border,
     this.margin,
+    this.padding,
     this.filled,
     this.fillcolor,
     this.decoration,
@@ -26,7 +28,7 @@ class _MyTextFormState extends State<MyTextForm> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: widget.padding ?? const EdgeInsets.all(10),
       child: TextFormField(
         decoration: InputDecoration(
           hintText: widget.hintText,

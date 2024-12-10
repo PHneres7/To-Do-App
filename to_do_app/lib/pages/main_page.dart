@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:to_do_app/pages/register_page.dart';
 
 import 'package:to_do_app/widgets/decoration_circle.dart';
-import 'package:to_do_app/widgets/final_button.dart';
+import 'package:to_do_app/widgets/my_button.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -10,6 +10,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue.shade50,
       body: Stack(
         children: [
           const DecorationCircle(),
@@ -45,7 +46,7 @@ class MainPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                FinalButton(
+                MyButton(
                   labelText: 'Get Started',
                   route: (context) => const RegisterPage(),
                 ),

@@ -2,25 +2,27 @@
 
 import 'package:flutter/material.dart';
 
-class FinalButton extends StatefulWidget {
+class MyButton extends StatefulWidget {
   final String labelText;
   final WidgetBuilder route;
+  final EdgeInsetsGeometry? padding;
 
-  const FinalButton({
+  const MyButton({
     super.key,
     required this.labelText,
     required this.route,
+    this.padding,
   });
 
   @override
-  State<FinalButton> createState() => _FinalButtonState();
+  State<MyButton> createState() => _MyButtonState();
 }
 
-class _FinalButtonState extends State<FinalButton> {
+class _MyButtonState extends State<MyButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 100, bottom: 20),
+      padding: widget.padding ?? EdgeInsets.only(top: 100, bottom: 20),
       child: TextButton(
         onPressed: () {
           Navigator.push(

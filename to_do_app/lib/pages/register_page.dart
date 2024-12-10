@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_app/main.dart';
+import 'package:to_do_app/pages/login_page.dart';
 import 'package:to_do_app/pages/main_page.dart';
 import 'package:to_do_app/widgets/decoration_circle.dart';
-import 'package:to_do_app/widgets/final_button.dart';
+import 'package:to_do_app/widgets/my_button.dart';
 import 'package:to_do_app/widgets/my_text_form.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -45,9 +45,9 @@ class RegisterPage extends StatelessWidget {
                   const MyTextForm(
                     hintText: 'Confirm password',
                   ),
-                  FinalButton(
+                  MyButton(
                     labelText: 'Register',
-                    route: (context) => const MainPage(),
+                    route: (context) => const LoginPage(),
                   ),
                   const Text.rich(
                     TextSpan(
